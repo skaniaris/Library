@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OrganizationPractice</title>
+</head>
+<body>
+    
+<h1>Book Library</h1>
+<button class="startBtn" type="button">Add Book</button>
+
+<div class="bookList"></div>
+
+<div class="popupHidden">
+    <fieldset>
+        <legend>Book Information</legend>
+
+        <div class="field">
+            <label for="title">Title</label>
+            <input type="text" id="title">
+        </div>
+
+        <div class="field">
+            <label for="author">Author</label>
+            <input type="text" id="author">
+        </div>
+        
+        <div class="field">
+
+        </div>
+        <div class="field">
+
+        </div>
+        
+
+
+        <label for="pages">Number of Pages</label>
+        <input type="number" id="pages">
+
+        <div class="read">
+            <label for="read" class="toggle">
+                Have you read it?
+                <input class="toggle_input" type="checkbox" id="read">
+                <div class="toggle_fill"></div>
+            </label>
+        </div>
+
+        <button class="complete" type="submit">Add New Book</button>
+    </fieldset>
+</div>
+
+<div class="library"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
