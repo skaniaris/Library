@@ -9,10 +9,10 @@
 </head>
 <body>
     
-<h1>Book Library</h1>
-<button class="startBtn" type="button">Add Book</button>
-
-<div class="bookList"></div>
+    <h1>Book Library</h1>
+    <button class="startBtn" type="button">Add Book</button>
+    
+    <div class="bookList"></div>
 
 <div class="popupHidden">
     <fieldset>
@@ -29,25 +29,15 @@
         </div>
         
         <div class="field">
-
+            <label for="pages">Number of Pages</label>
+            <input type="number" id="pages">
         </div>
-        <div class="field">
 
+        <div class="field">
+            <label for="read" class="toggle">Have you read it?</label>
+            <input class="toggle_input" type="checkbox" id="read" checked="none">
         </div>
         
-
-
-        <label for="pages">Number of Pages</label>
-        <input type="number" id="pages">
-
-        <div class="read">
-            <label for="read" class="toggle">
-                Have you read it?
-                <input class="toggle_input" type="checkbox" id="read">
-                <div class="toggle_fill"></div>
-            </label>
-        </div>
-
         <button class="complete" type="submit">Add New Book</button>
     </fieldset>
 </div>

@@ -1,4 +1,5 @@
 body {
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,44 +9,13 @@ fieldset {
     border: none;
 }
 
-/* Toggle Button */
-.toggle {
-    border-radius: 35px;
-    cursor: pointer;
-}
-
-.toggle_input {
-    display: none;
-}
-
-.toggle_input:checked ~ .toggle_fill {
-    background-color: cornflowerblue;
-}
-
-.toggle_input:checked~.toggle_fill::after {
-    transform: translateX(30.5px);
-}
-
-.toggle_fill::after {
-    content: "";
-    position:absolute;
-    top: 2.5px; 
-    left: 1.5px;
-    width: 26px;
-    height: 26px;
-    background-color: white;
-    border-radius: 35px;
-    transition: transform 0.2s;
-}
-
-.toggle_fill {
-    margin-top: 10px;
-    position: relative;
-    width: 60px;
-    height: 30px;
-    border-radius: 35px;
-    background-color:rgb(220, 216, 216);
-    transition: .4s;
+h1 {
+    width: 100vw;
+    margin-top: 0;
+    background: rgb(53, 53, 53);
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px 0 15px 0;
 }
 
 /* form */
@@ -60,7 +30,8 @@ button {
     border: none;
     padding: 7px 12px 7px 12px;
     border-radius: 15px;
-    background-color: rgb(220, 216, 216);
+    background-color:#019B67;
+    color: white;
     cursor: pointer;
     
 }
@@ -81,9 +52,22 @@ button {
 }
 
 .popupShow {
-    border: solid 1.5px rgb(222, 219, 219);
+    border: solid 2px #019B67;
+    background-color: white;
     padding: 15px;
     margin-top: 15px;
+    min-width: 400px;
     border-radius: 15px;
     opacity: 100%;
+    position: absolute;
+    top:150px;
+}
+
+/* Library Display Styling */
+.bookList div {
+    border: solid 2px #019B67;
+    margin: 15px 0 15px 0;
+    min-width: 300px;
+    border-radius: 15px;
+    padding: 20px; 
 }
