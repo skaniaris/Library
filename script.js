@@ -24,12 +24,13 @@ let newBook;
 // Adds book to library //
 
 j = 0;  
+let del; 
 
 function displayBook() {
-    let i = 0; 
     let lb = document.createElement("br"); 
 
     newBook = document.createElement("div");
+    newBook.setAttribute("id", j );
     document.querySelector(".bookList").appendChild(newBook); 
     newBook.innerHTML += "Title: " + myLibrary[j].title + "<br/>"; 
     newBook.innerHTML += "Author: " +myLibrary[j].author + "<br/>";
@@ -50,10 +51,11 @@ function displayBook() {
 
     newBook.appendChild(lb);
 
-    const del = document.createElement("button"); 
+    del = document.createElement("button"); 
     del.innerHTML = "Delete";
-    del.classList.add("delBtn") 
+    del.setAttribute("id", j);
     newBook.appendChild(del);
+    del.addEventListener("click", deleteBook);
 
     j++; 
         }
@@ -99,8 +101,6 @@ function formReset() {
 // delete button functionality 
 
 function deleteBook() {
-    this.remove(parent);
+    btnId = this.id; 
+    document.getElementById(btnId).remove(); 
 }
-
-const delbtn = document.querySelector(".delBtn"); 
-delbtn.addEventListener("click", deleteBook);
